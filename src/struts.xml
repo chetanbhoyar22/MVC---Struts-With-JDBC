@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"></constant>
+	<package name="default" extends="struts-default">
+	
+		<action name="register" class="spiderbeans.NewAccountAction">
+			<result name="success">Success.jsp</result>
+			<result name="fail">Failure.jsp</result>
+		</action>
+		
+		<action name="teamsreport" class="spiderbeans.PLTeamsReportAction">
+			<result name="success">PlayersReport.jsp</result>
+		</action>
+		
+		<action name="check" class="spiderbeans.CodeVerificationAction">
+			<result name="success">UserHome.jsp</result>
+			<result name="fail">Failure.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+		
+		<action name="celeblist" class="spiderbeans.CelebrityListAction">
+			<result name="success">CelebritiesReport.jsp</result>
+		</action>
+	</package>
+</struts>
